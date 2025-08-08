@@ -1,0 +1,7 @@
+{
+  "name": "termFrontEnd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
