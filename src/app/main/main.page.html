@@ -15,11 +15,19 @@
       <ion-label position="floating">Schema Name:</ion-label>
       <ion-input formControlName="schemaName" type="text"></ion-input>
     </ion-item>
-    
-    <ion-button (click)="sendMakeDB()">
+
+    <ion-button type="submit" (click)="sendMakeDB()">
       Create Database
     </ion-button>
-
-    <h2>Out Message: {{outMsg.msg}}</h2>
   </form>
+
+  <ion-button (click)="sendBatchData()">
+    Send Batch Data from File
+  </ion-button>
+
+  <ion-button (click)="sendDeleteAll()">
+    Delete All Documents from Database
+  </ion-button>
+
+  <h3>Error Out Message: {{outMsg.msg}}</h3>
 </ion-content>
