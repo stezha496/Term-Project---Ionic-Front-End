@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { DatabaseServiceService } from '../database-service.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-listing',
   templateUrl: './listing.page.html',
   styleUrls: ['./listing.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule, RouterModule]
 })
 export class ListingPage implements OnInit {
 
@@ -35,5 +36,6 @@ export class ListingPage implements OnInit {
       },
       complete: () => console.info('Complete')
     });
+    alert('Data retrieved');
   }
 }

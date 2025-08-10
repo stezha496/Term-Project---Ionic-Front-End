@@ -5,5 +5,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <h3>Selected Document:</h3>
+  <ion-item>{{retrievedQ}} {{retrievedA}}</ion-item>
+
+  <ion-button (click)="sendDeleteItem()">
+    Delete the currently selected Item
+  </ion-button>
+
+  <h3>Add new Document or Update Existing:</h3>
+  <form [formGroup]="updateForm">
+    <ion-item>
+      <ion-label position="floating">Question:</ion-label>
+      <ion-input formControlName="newQ" type="text">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Answer:</ion-label>
+      <ion-input formControlName="newA" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="sendUpdateItem()">
+      Update the currently selected Item
+    </ion-button>
+
+    <ion-button (click)="sendAddItem()">
+      Add the Item
+    </ion-button>
+  </form>
+
+  <h2>Error: {{outMsg.msg}}</h2>
 </ion-content>

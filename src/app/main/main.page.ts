@@ -67,6 +67,7 @@ export class MainPage implements OnInit {
       },
       complete: () => console.info('Complete')
     });
+    alert('Data sent');
   }
 
   // Delete all from db
@@ -82,5 +83,6 @@ export class MainPage implements OnInit {
       },
       complete: () => console.info('Complete')
     });
+    alert('Data deleted');
   }
 }

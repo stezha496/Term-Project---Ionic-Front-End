@@ -12,7 +12,7 @@
 
   <h1>Database:</h1>
   @for (i of fromDB; track i) {
-  <li>{{i.Question}} : {{i.Answer}}</li> }
+  <ion-item [routerLink]="['/update']" [queryParams]="{Question:i.Question,Answer:i.Answer}">{{i.Question}} : {{i.Answer}}</ion-item> }
 
   <h3>Error: {{outMsg.msg}}</h3>
 </ion-content>
