@@ -23,4 +23,14 @@ export class DatabaseServiceService {
   deleteAll(): Observable<any>{
     return this.http.delete("http://127.0.0.1:8887/delete-all/"); 
   }
+
+  // Get all documents from DB
+  getAll(): Observable<any> {
+    return this.http.get("http://127.0.0.1:8887/get-all/");
+  }
+
+  // Update item
+  updateItem(itemInfo: any): Observable<any> {
+    return this.http.put("http://127.0.0.1:8887/update", itemInfo);
+  }
 }

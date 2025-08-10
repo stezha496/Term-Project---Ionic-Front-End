@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { DatabaseServiceService } from '../database-service.service';
 
 @Component({
   selector: 'app-listing',
@@ -12,7 +13,9 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 })
 export class ListingPage implements OnInit {
 
-  constructor() { }
+  constructor(private dbService: DatabaseServiceService) {
+
+   }
 
   ngOnInit() {
   }
