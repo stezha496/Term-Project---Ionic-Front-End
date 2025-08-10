@@ -5,5 +5,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <p>Big pisser</p>
+  <form [formGroup]="ionicForm">
+    <ion-item>
+      <ion-label position="floating">Database Name:</ion-label>
+      <ion-input formControlName="databaseName" type="text">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Schema Name:</ion-label>
+      <ion-input formControlName="schemaName" type="text"></ion-input>
+    </ion-item>
+    
+    <ion-button (click)="sendMakeDB()">
+      Create Database
+    </ion-button>
+
+    <h2>Out Message: {{outMsg.msg}}</h2>
+  </form>
 </ion-content>
