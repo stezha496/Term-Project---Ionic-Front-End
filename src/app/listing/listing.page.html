@@ -6,4 +6,13 @@
 
 <ion-content [fullscreen]="true">
 
+  <ion-button (click)="sendGetAll()">
+    Get All Documents from Database
+  </ion-button>
+
+  <h1>Database:</h1>
+  @for (i of fromDB; track i) {
+  <li>{{i.Question}} : {{i.Answer}}</li> }
+
+  <h3>Error: {{outMsg.msg}}</h3>
 </ion-content>
