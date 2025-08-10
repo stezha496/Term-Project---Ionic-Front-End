@@ -20,8 +20,8 @@ export class DatabaseServiceService {
   }
 
   // Delete all documents from DB
-  deleteAll(): Observable<any>{
-    return this.http.delete("http://127.0.0.1:8887/delete-all/"); 
+  deleteAll(): Observable<any> {
+    return this.http.delete("http://127.0.0.1:8887/delete-all/");
   }
 
   // Get all documents from DB
@@ -31,16 +31,16 @@ export class DatabaseServiceService {
 
   // Update item
   updateItem(itemInfo: any): Observable<any> {
-    return this.http.put("http://127.0.0.1:8887/update/", itemInfo);
+    return this.http.put("http://127.0.0.1:8887/update/", { itemInfo });
   }
 
   // Delete the given item
-  deleteItem(itemInfo: any): Observable<any>{
+  deleteItem(itemInfo: any): Observable<any> {
     return this.http.delete("http://127.0.0.1:8887/delete/", { body: itemInfo }); // TODO: I don't know why this works this way but it doesn't work using query. 
   }
 
   // Insert single item
-  addItem(data: any){
+  addItem(data: any) {
     return this.http.post('http://127.0.0.1:8887/insert/', { data });
   }
 }

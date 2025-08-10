@@ -28,7 +28,6 @@ export class ListingPage implements OnInit {
     this.dbService.getAll().subscribe({
       next: (v: any) => {
         this.fromDB = v;
-        // this.outMsg = v;
       },
       error: (e) => {
         console.error(e);

@@ -62,9 +62,21 @@ export class UpdatePage implements OnInit {
     alert('Data deleted');
   }
 
-
   sendUpdateItem() {
-
+    const data = {
+      "Question": this.updateForm.value["newQ"],
+      "Answer": this.updateForm.value["newA"]
+    };
+    this.dbService.updateItem(data).subscribe({
+      next: (data: any) => {
+        console.log(data);
+      },
+      error: (e) => {
+        console.error(e);
+        this.outMsg = e.message;
+      },
+      complete: () => console.info('Complete')
+    });
   }
 
   sendAddItem() {
